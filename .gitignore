@@ -1,0 +1,25 @@
+# Рабочие материалы, которые не должны уехать в публичный репозиторий
+research/
+материалы/
+выжимки/
+digests/
+
+# Проектные скиллы, не предназначенные для публикации
+skills/ru-skill-build/
+
+# Локальные настройки агентов
+.claude/settings.local.json
+.claude/*.local.md
+.agents/
+.codex/
+
+# Системное
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+*~
+
+# Редакторы
+.vscode/
+.idea/
