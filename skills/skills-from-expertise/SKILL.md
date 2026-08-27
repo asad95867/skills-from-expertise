@@ -3,7 +3,7 @@ name: skills-from-expertise
 description: "What goes inside a skill rather than how to format it: how to turn expertise into a methodology, not a list of tips. Load when a skill carrying subject knowledge is being created or rewritten, whether from a video, book, article, course, interview, spreadsheet, diagram, regulation, code, or your own experience; when deciding what belongs inside a skill and by what criterion; when sources contradict each other; when a rule looks obvious; when naming a skill, drawing a boundary between skills, or organising a set; when a skill is written but unusable, the knowledge there and the decisions missing; when there is little material and it is unclear whether it is enough; when the result should be project instructions or a reference rather than a skill; before publishing a skill built from someone else's material. Legal framing lives here too: what may be taken, when to quote, which license to apply, what to do with personal data and sources under NDA. Not about format, which the Agent Skills specification covers."
 license: MIT
 metadata:
-  version: 6.1.0
+  version: 6.4.0
 ---
 
 # Designing a methodology
@@ -1150,7 +1150,9 @@ of content is more reliable than a reference that may not resolve.
 
 ⚠️ **Open `references/skill-sets.md` when:** there are more than three skills and they refer
 to each other, or you are deciding whether to hand out the set whole or in parts, or
-an existing skill needs updating with new material.
+an existing skill needs updating with new material, or a source arrives that doesn't match
+the type of request anything else in the set catches, even when the topic looks familiar —
+that's the moment where the set's connectivity will show nothing wrong.
 
 # How a skill degrades during refinement
 

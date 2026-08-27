@@ -45,9 +45,70 @@ is isolated and can be handed out on its own.
 
 **A separate note on routers.** A skill that decides nothing itself and only determines where
 to go is a legitimate and useful type. Its sign: many outgoing references at small size.
-**There should not be two routers in one set**, since they compete for the same requests;
-if there are two, one of them has actually become a full skill and its description needs
-narrowing.
+
+⚠️ **You need as many routers as there are genuinely different entry points, not one per
+set.** "One router per set" looks like a tidy rule and gets adopted for exactly that reason,
+but entry points differ not by topic but by the nature of the request: someone arriving
+with a symptom ("it worked, now it doesn't") is not arriving the same way as someone
+arriving with a blank slate ("there's nothing here, where do I start"). One router does not
+cover both, because the second kind of request has no fault to diagnose.
+
+**When there genuinely are two routers, they compete** if they catch the same entry point.
+Different entry points do not compete, even when they lead into the same set afterward.
+Tell them apart by the entry, not by the fact that two skills happen to have many outgoing
+references.
+
+## Coverage is a separate check from connectivity
+
+⚠️ **A set can be flawlessly connected inside itself and still fail to catch an entire class
+of request.** Connectivity checks what is already in the set and says nothing about what
+isn't. The two checks are different, and passing one does not mean passing the other.
+
+**The mechanism behind the gap.** Skills get added one at a time, each closing its own
+source or its own topic, and the set stays connected at every step along the way. A whole
+class of request can lack a destination not because it was rejected but because nobody ever
+phrased it: the source that would have closed it simply hasn't arrived yet.
+
+**The check:** for every source in the set, ask what request it serves, and whether that
+request is caught by a single description in the set, including the description of that
+skill itself. If not, either a new skill is needed or existing triggers need extending.
+Connectivity will not show this gap: the references are all fine, there are no duplicates,
+and the request still falls through the set anyway.
+
+*A practical sign: material arrives that isn't a new topic but a different type of request
+about a topic already covered, and it turns out nothing in the set catches it, even though
+the topic looks closed.*
+
+### A dangling "not for this" is the same missed request in disguise
+
+⚠️ **Every pointer elsewhere has to name a destination that exists.** "That's not for here,
+see the skill about X" only works if X is actually in the set. A dangling pointer looks like
+tidy routing and so raises no suspicion. It passes every check on the surface, it answers
+the request with a refusal, and that is exactly why it goes unnoticed.
+
+**The check:** walk every "not for here" phrasing in the set and find the file it points to,
+by meaning, not by name. Pointing at nothing is the same missing request type, just recorded
+as a refusal instead of a gap.
+
+**What of this automates and what doesn't.** Orphans, dead ends, and dangling pointers count
+mechanically: it's link counting between files, and understanding content isn't required.
+Coverage doesn't: deciding whether the set catches a given kind of request means
+understanding what that request is, which is judgement, not counting. If you're scripting
+this, have the script find orphans and dead ends, and leave coverage as a separate item for
+manual review. Trying to automate that one too usually gives a false sense of checking:
+the script finds text matches where recognising a new kind of request was actually needed.
+
+### The sign a skill has become connective tissue
+
+A skill that mostly collects requests and routes them onward, rather than deciding anything
+itself, quietly turns into an architectural node of the set. At that point it needs more
+than one mode block:
+
+- **a routing table** across the whole set: what leads where, and by what sign;
+- a **"signs you're at the wrong entry point"** section, so a reader who started in the wrong
+  place can tell before working through the content;
+- **mutual references with the other entry points**, if there is more than one, see the note
+  on the number of routers above.
 
 ## A reference has to name the content, not the name
 
